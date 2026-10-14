@@ -241,14 +241,15 @@ jobs:
           CLAUDE_CODE_DIR="$GITHUB_WORKSPACE/claude-offline-packages/node_modules/@anthropic-ai/claude-code"
 
           # Detect platform and architecture
-          ARCH=$(uname -m)
-          if [ "$ARCH" = "x86_64" ]; then
-            PLATFORM_ARCH="x64"
-          elif [ "$ARCH" = "aarch64" ]; then
-            PLATFORM_ARCH="arm64"
-          else
-            PLATFORM_ARCH="$ARCH"
-          fi
+          #ARCH=$(uname -m)
+          #if [ "$ARCH" = "x86_64" ]; then
+            #PLATFORM_ARCH="x64"
+          #elif [ "$ARCH" = "aarch64" ]; then
+            #PLATFORM_ARCH="arm64"
+          #else
+            #PLATFORM_ARCH="$ARCH"
+          #fi
+          PLATFORM_ARCH="arm64"
           echo "Platform: linux-${PLATFORM_ARCH}"
 
           # Find and copy the native binary
